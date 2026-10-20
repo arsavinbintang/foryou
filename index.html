@@ -27,7 +27,7 @@ body, html {
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-image: url('background.png');
+    background-image: url('background.png'); 
     background-size: cover;
     background-position: center;
     display: flex;
@@ -229,7 +229,7 @@ body, html {
 }
 
 #letter-content {
-    font-size: 2.2rem;
+    font-size: 2rem;
     line-height: 1.5;
     white-space: pre-wrap;
     margin-bottom: 20px;
@@ -285,7 +285,7 @@ body, html {
 <div id="game-container" onclick="advanceDialogue()">
     <div id="overlay"></div>
     <img id="character-sprite" src="" alt="">
-
+    
     <div id="choice-container"></div>
 
     <div id="dialogue-box">
@@ -323,7 +323,7 @@ let currentLetterIdx = 0;
 let isLetterTyping = false;
 let letterInterval;
 
-let gameState = 'DIALOGUE';
+let gameState = 'DIALOGUE'; 
 
 function playClick() {
     clickSfx.currentTime = 0;
@@ -343,12 +343,12 @@ const story = [
     },
     {
         name: "Junpei Iori",
-        image: "junpei.png",
+        image: "junpei.png", 
         text: "Yo, Sandrina! Selamat ulang tahun ke-16 hari ini! Semoga sehat selalu ya! Lo beneran keren abis udah bertahan sejauh ini."
     },
     {
         name: "Junpei Iori",
-        image: "junpei.png",
+        image: "junpei.png", 
         text: "Denger-denger lo habis gendong teman-teman sekelompok lo yang beban itu ya? Gila, the real MVP! Tapi ingat, jangan sampai lo kelelahan sendiri."
     },
     {
@@ -359,8 +359,8 @@ const story = [
         rejectionCount: 0,
         choices: [
             { text: "Iya, aku janji bakal selalu positif!", next: true },
-            {
-                text: "Nggak tau deh, rasanya capek...",
+            { 
+                text: "Nggak tau deh, rasanya capek...", 
                 rejectTexts: [
                     "Heeei! Nggak ada kata nolak! Lo protagonis kita, jadi lo wajib janji buat terus semangat! Ayo bilang janji!",
                     "Ayolah Sandrina! Kalo lo pesimis terus, party kita bisa ikutan down! Plis janji dong, ya? Ya??",
@@ -387,8 +387,8 @@ const story = [
         rejectionCount: 0,
         choices: [
             { text: "Tentu, aku janji nggak akan nyerah.", next: true },
-            {
-                text: "Tapi aku pengen nyerah aja...",
+            { 
+                text: "Tapi aku pengen nyerah aja...", 
                 rejectTexts: [
                     "Hei! Aku tidak melatihmu untuk jadi pengecut! Kau harus berjanji padaku untuk terus berjuang!",
                     "Alasan lelah tidak kuterima! Kau punya potensi luar biasa. Tegakkan kepalamu dan berjanji sekarang!",
@@ -415,8 +415,8 @@ const story = [
         rejectionCount: 0,
         choices: [
             { text: "Iya, aku janji nggak bakal cabut kuku lagi.", next: true },
-            {
-                text: "Tapi kan refleks kalau lagi panik...",
+            { 
+                text: "Tapi kan refleks kalau lagi panik...", 
                 rejectTexts: [
                     "Jangan keras kepala! Jarimu bisa infeksi dan luka, bodoh! Cepat janji padaku sekarang!",
                     "Dengar, aku nggak akan membiarkanmu merusak dirimu sendiri. Hentikan kebiasaan jelek itu. Janji!",
@@ -438,8 +438,8 @@ const story = [
         rejectionCount: 0,
         choices: [
             { text: "Baik, aku janji bakal jaga diri.", next: true },
-            {
-                text: "Tugasnya masih banyak...",
+            { 
+                text: "Tugasnya masih banyak...", 
                 rejectTexts: [
                     "Aku tidak akan membiarkan percakapan ini berlanjut sebelum kau berjanji. Kau harus peduli pada dirimu sendiri.",
                     "Mengerjakan segalanya sendirian itu tidak akan membawamu ke mana-mana selain kehancuran. Aku tahu rasanya. Janji padaku.",
@@ -466,8 +466,8 @@ const story = [
         rejectionCount: 0,
         choices: [
             { text: "Janji, aku bakal belajar mencintai diriku.", next: true },
-            {
-                text: "Kayaknya susah deh...",
+            { 
+                text: "Kayaknya susah deh...", 
                 rejectTexts: [
                     "Ihhh Sandrina! Gak mau tau, pokoknya harus janji! Masa sama diri sendiri aja gak sayang? Ayo pencet janji!",
                     "Gak lucu tau memaksakan diri terus! Kamu itu berharga! Ayo bilang iya dan janji sama aku sekarang!",
@@ -499,8 +499,8 @@ const story = [
         rejectionCount: 0,
         choices: [
             { text: "Iya Arshavin, aku janji.", next: true },
-            {
-                text: "Aku bener-bener capek...",
+            { 
+                text: "Aku bener-bener capek...", 
                 rejectTexts: [
                     "Aku tau kamu capek, San. Tapi aku nggak bakal biarin kamu nyerah di sini. Ayo klik janji, aku yakin kamu kuat ngelewatin semuanya.",
                     "San, please... dengerin aku. Kamu nggak sendirian, ada aku di sini. Aku mohon, janjilah buat bertahan.",
@@ -517,15 +517,18 @@ const story = [
 ];
 
 const letters = [
-    "Untuk Sandrina...\n\nSelamat ulang tahun. Maaf aku tidak bisa hadir karena ada urusan penting Kirijo Group yang mendesak. Tetaplah menjadi sosok yang kuat dan elegan dalam menghadapi apapun.\n\n- Mitsuru Kirijo",
-    "Selamat ulang tahun yang ke-16, Sandrina-san.\n\nSistemku mendeteksi bahwa kamu adalah keberadaan yang sangat berharga. Meski ragaku tidak di sana, aku akan selalu melindungimu dari jauh.\n\n- Aigis",
-    "Wabby Wabbo!\n\nHappy birthday! I planted some extra sunflowers for your front yard! But watch out for the zombies, I think I saw one wearing a party hat... Wabby Wabbo!\n\n- Crazy Dave",
-    "Happy 16th Birthday, Sandrina!\n\nIngat, kerja sama adalah kunci segalanya. Kalau kita berdua bisa memperbaiki pernikahan kita setelah diubah jadi boneka kayu dan tanah liat, kamu pasti bisa melewati rintangan apa pun!\n\n- Cody & May",
-    "Selamat ulang tahun.\n\nTetaplah rasional dan logis dalam menyusun jalan hidupmu, tapi pastikan setiap langkahmu memiliki tujuan yang pasti.\n\n- Mio Hudson\n\nIya bener! Biarkan imajinasimu meliar! Semoga hidupmu penuh sihir dan keajaiban yang menyenangkan!\n\n- Zoe Foster",
-    "SIUUUU!\n\nHappy birthday, Sandrina! Keep working hard, believe in yourself, and always aim for the top! Your hard work will pay off!\n\n- Cristiano Ronaldo",
-    "Mamma mia!\n\nHappy 16th Birthday! It's-a me, Mario! Keep jumping over those obstacles, woohoo! Here's a 1-Up Mushroom for you!\n\n- Mario",
-    "You have survived another year. Good.\n\nDo not let the burdens of others break your focus. Be better. Stay strong. Happy birthday, Sandrina.\n\n- Kratos",
-    "Happy Birthday, kid.\n\nThis world ain't easy, and people will test you. But you're strong. Take care of yourself out there, alright? Don't let 'em break you.\n\n- Arthur Morgan",
+    "Untuk Sandrina...\n\nSelamat ulang tahun. Maaf aku tidak bisa hadir karena ada urusan penting Kirijo Group yang mendesak. Tetaplah menjadi sosok yang kuat dan elegan dalam menghadapi apapun.\n\n- Mitsuru Kirijo (Persona 3)",
+    "Selamat ulang tahun yang ke-16, Sandrina-san.\n\nSistemku mendeteksi bahwa kamu adalah keberadaan yang sangat berharga. Meski ragaku tidak di sana, aku akan selalu melindungimu dari jauh.\n\n- Aigis (Persona 3)",
+    "Wabby Wabbo!\n\nHappy birthday! I planted some extra sunflowers for your front yard! But watch out for the zombies, I think I saw one wearing a party hat... Wabby Wabbo!\n\n- Crazy Dave (Plants vs. Zombies)",
+    "Happy 16th Birthday, Sandrina!\n\nIngat, kerja sama adalah kunci segalanya. Kalau kita berdua bisa memperbaiki pernikahan kita setelah diubah jadi boneka kayu dan tanah liat, kamu pasti bisa melewati rintangan apa pun!\n\n- Cody & May (It Takes Two)",
+    "Selamat ulang tahun.\n\nTetaplah rasional dan logis dalam menyusun jalan hidupmu, tapi pastikan setiap langkahmu memiliki tujuan yang pasti.\n\n- Mio Hudson (Split Fiction)",
+    "Iya bener! Biarkan imajinasimu meliar! Semoga hidupmu penuh sihir dan keajaiban yang menyenangkan! Happy birthday!!\n\n- Zoe Foster (Split Fiction)",
+    "Tatakae... Selamat ulang tahun, Sandrina.\n\nDunia ini memang kejam, tapi juga sangat indah. Teruslah maju dan berjuang untuk kebebasanmu sendiri. Jangan biarkan siapapun merebutnya darimu.\n\n- Eren Yeager (Attack on Titan)",
+    "Selamat ulang tahun, Sandrina.\n\nSelama kau memiliki seseorang yang berharga untuk dilindungi, kau akan menjadi sangat kuat. Tolong, jaga dirimu baik-baik.\n\n- Mikasa Ackerman (Attack on Titan)",
+    "SIUUUU!\n\nHappy birthday, Sandrina! Keep working hard, believe in yourself, and always aim for the top! Your hard work will pay off!\n\n- Cristiano Ronaldo (Sepak Bola)",
+    "Mamma mia!\n\nHappy 16th Birthday! It's-a me, Mario! Keep jumping over those obstacles, woohoo! Here's a 1-Up Mushroom for you!\n\n- Mario (Super Mario Bros.)",
+    "You have survived another year. Good.\n\nDo not let the burdens of others break your focus. Be better. Stay strong. Happy birthday, Sandrina.\n\n- Kratos (God of War)",
+    "Happy Birthday, kid.\n\nThis world ain't easy, and people will test you. But you're strong. Take care of yourself out there, alright? Don't let 'em break you.\n\n- Arthur Morgan (Red Dead Redemption 2)",
     "San, ini aku lagi.\n\nAku cuma mau bilang kalau aku beruntung banget bisa kenal dan ada di sampingmu. Tolong jaga dirimu baik-baik, jangan pernah menyerah.\n\nI love you.\n- Arshavin"
 ];
 
@@ -551,21 +554,21 @@ function updateBackButton() {
 
 function renderDialogue(idx) {
     let currentData = story[idx];
-
+    
     if (currentData.type === 'choice') {
         currentData.isResolved = false;
         currentData.rejectionCount = 0;
     }
-
+    
     speakerNameEl.innerHTML = currentData.name;
-
+    
     if (currentData.image) {
         characterSpriteEl.src = currentData.image;
         characterSpriteEl.style.opacity = 1;
     } else {
         characterSpriteEl.style.opacity = 0;
     }
-
+    
     activeDialogueText = currentData.type === 'choice' ? currentData.question : currentData.text;
 
     typeWriter(activeDialogueText, () => {
@@ -577,14 +580,14 @@ function renderDialogue(idx) {
 }
 
 function advanceDialogue() {
-    if (isTyping || isChoiceActive) return;
-
+    if (isTyping || isChoiceActive) return; 
+    
     if (!audioStarted) {
         bgm.volume = 0.6;
         bgm.play().catch(()=>{});
         audioStarted = true;
     }
-
+    
     playClick();
     currentLine++;
 
@@ -592,7 +595,7 @@ function advanceDialogue() {
         document.getElementById('fade-black').style.opacity = '1';
         dialogueTextEl.innerHTML = "...";
         speakerNameEl.innerHTML = "";
-
+        
         setTimeout(() => {
             document.getElementById('game-container').style.display = 'none';
             let letterScreen = document.getElementById('letter-screen');
@@ -614,18 +617,18 @@ function showChoices(choiceData) {
     isChoiceActive = true;
     choiceContainer.innerHTML = '';
     choiceContainer.style.display = 'flex';
-    updateBackButton();
-
+    updateBackButton(); 
+    
     choiceData.choices.forEach(c => {
         let btn = document.createElement('button');
         btn.className = 'choice-btn';
         btn.innerText = c.text;
         btn.onclick = (e) => {
-            e.stopPropagation();
+            e.stopPropagation(); 
             playClick();
             choiceContainer.style.display = 'none';
             isChoiceActive = false;
-
+            
             if (c.next) {
                 advanceDialogue();
             } else {
@@ -657,7 +660,7 @@ function typeWriter(text, callback) {
     isTyping = true;
     dialogueTextEl.innerHTML = '';
     nextIndicator.style.display = 'none';
-
+    
     let i = 0;
     clearInterval(typeInterval);
     typeInterval = setInterval(() => {
@@ -679,11 +682,11 @@ function typeWriter(text, callback) {
 function renderLetter(idx) {
     letterContentEl.innerHTML = '';
     letterIndicatorEl.style.display = 'none';
-
+    
     isLetterTyping = true;
     let text = letters[idx];
     let i = 0;
-
+    
     clearInterval(letterInterval);
     letterInterval = setInterval(() => {
         letterContentEl.innerHTML += text.charAt(i);
@@ -698,7 +701,7 @@ function renderLetter(idx) {
 }
 
 function advanceLetter() {
-    if (isLetterTyping) return;
+    if (isLetterTyping) return; 
     playClick();
 
     currentLetterIdx++;
@@ -707,7 +710,7 @@ function advanceLetter() {
         let letterScreen = document.getElementById('letter-screen');
         letterScreen.style.opacity = '0';
         backBtn.style.display = 'none';
-
+        
         setTimeout(() => {
             letterScreen.style.display = 'none';
             let endingScreen = document.getElementById('ending-screen');
@@ -725,7 +728,7 @@ function advanceLetter() {
 
 function goBack(e) {
     e.stopPropagation();
-    if (isTyping || isLetterTyping) return;
+    if (isTyping || isLetterTyping) return; 
     playClick();
 
     if (gameState === 'DIALOGUE') {
@@ -740,7 +743,7 @@ function goBack(e) {
         } else {
             let letterScreen = document.getElementById('letter-screen');
             letterScreen.style.opacity = '0';
-
+            
             setTimeout(() => {
                 letterScreen.style.display = 'none';
                 document.getElementById('game-container').style.display = 'flex';
